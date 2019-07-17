@@ -24,7 +24,8 @@ if (window.scrollY >= Video1.parent.offsetTop && window.scrollY <= (Video1.paren
 ```
 
 ## Styles
-* simple css styling
+* simple css styling as a fallback
+* JS function ```fullWidthOrHeight()``` to have video cover background in all circumstances
 
 Desktop:
 ```
