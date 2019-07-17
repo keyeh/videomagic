@@ -11,6 +11,7 @@ class Video {
 			window.scrollY >= Video1.parent.offsetTop && window.scrollY <= (Video1.parent.offsetTop + Video1.parent.offsetHeight - window.innerHeight)
 		) {
 			this.video.currentTime = this.video.duration * window.scrollY / this.parent.clientHeight;
+			window.requestAnimationFrame(this.scroll);
 		}
 	}
 	fullWidthOrHeight() {
@@ -33,7 +34,7 @@ let Video1 = new Video(videoEl,document.querySelector('.container'));
 Video1.fullWidthOrHeight();
 
 window.addEventListener('scroll', () => {
-	window.requestAnimationFrame(() => Video1.scroll());
+	Video1.scroll();
 });
 
 window.addEventListener('resize', () => {
