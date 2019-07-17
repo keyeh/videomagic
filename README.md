@@ -1,5 +1,5 @@
 # video scroll magic
-![preview image](https://github.pie.apple.com/critical-mass/video/blob/master/preview.gif)
+![preview image](https://github.com/troychroi/videomagic/blob/master/preview.gif)
 
 ## RAF loops
 * window.requestAnimationFrame(callback) - https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
