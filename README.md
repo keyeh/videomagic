@@ -22,3 +22,28 @@ run the scroll only when scroll position is in between the bounds of the contain
 ```
 if (window.scrollY >= Video1.parent.offsetTop && window.scrollY <= (Video1.parent.offsetTop + Video1.parent.offsetHeight - window.innerHeight))
 ```
+
+## Styles
+* simple css styling
+
+Desktop:
+```
+video {
+  width: inherit;
+  height: auto;
+  position: fixed;
+  z-index: 0;
+  opacity: .6;
+}
+```
+Break Point (where video width is at 100%, but not wider):
+```
+@media only screen and (max-width: 1770px) {
+  video {
+    width: auto;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+```
