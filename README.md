@@ -22,10 +22,3 @@ run the scroll only when scroll position is in between the bounds of the contain
 ```
 if (window.scrollY >= Video1.parent.offsetTop && window.scrollY <= (Video1.parent.offsetTop + Video1.parent.offsetHeight - window.innerHeight))
 ```
-
-## Styles
-* full width or height:
-  * mimics css background size cover based on a parent (can be window or any other DOM element)
-```
-[width|height]: inherit;
-```
