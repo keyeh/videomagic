@@ -48,3 +48,19 @@ Break Point (where video width is at 100%, but not wider):
   }
 }
 ```
+JS Solution:
+```
+fullWidthOrHeight() {
+  let vidwidth = this.video.getBoundingClientRect().width;
+  let vidheight = this.video.getBoundingClientRect().height;
+  let windowHeight = window.innerHeight;
+  let windowWidth = window.innerWidth;
+  let heightCSS = 'height:100vh;width: auto;';
+  let widthCSS = 'width:100vw;height: auto;';
+  if (windowHeight - vidheight > 0) {
+    this.video.setAttribute('style',heightCSS);
+  } else if (windowWidth - vidwidth > 0) {
+    this.video.setAttribute('style',widthCSS);
+  }
+}
+```

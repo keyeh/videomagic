@@ -19,18 +19,18 @@ class Video {
 		let vidheight = this.video.getBoundingClientRect().height;
 		let windowHeight = window.innerHeight;
 		let windowWidth = window.innerWidth;
-		let heightCSS = 'height:'+windowHeight+'px;width: auto;';
-		let widthCSS = 'width:'+windowWidth+'px;height: auto;';
-		console.log(heightCSS);
-		if (vidheight < windowHeight) {
+		let heightCSS = 'height:100vh;width: auto;';
+		let widthCSS = 'width:100vw;height: auto;';
+		if (windowHeight - vidheight > 0) {
 			this.video.setAttribute('style',heightCSS);
-		} else {
+		} else if (windowWidth - vidwidth > 0) {
 			this.video.setAttribute('style',widthCSS);
 		}
 	}
 }
 
 let Video1 = new Video(videoEl,document.querySelector('.container'));
+
 Video1.fullWidthOrHeight();
 
 window.addEventListener('scroll', () => {
